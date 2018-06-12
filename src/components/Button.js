@@ -1,13 +1,12 @@
 import styled from 'styled-components';
-import colors from '../constants/colors';
 
 const Button = styled.button`
     align-items: center;
     background-color: transparent;
     border: 1px solid transparent;
-    border-color: ${colors.VIOLA};
+    border-color: ${props => props.theme.primary};
     border-radius: 4px;
-    color: ${colors.VIOLA};
+    color: ${props => props.theme.primary};
     cursor: pointer;
     font-family: 'IBM Plex Sans', sans-serif;
     font-size: 1rem;
@@ -20,8 +19,8 @@ const Button = styled.button`
     text-transform: uppercase;
     white-space: nowrap;
     :hover {
-        background-color: ${colors.VIOLA};
-        border-color: ${colors.VIOLA};
+        background-color: ${props => props.theme.primary};
+        border-color: ${props => props.theme.primary};
         color: whitesmoke;
     }
 `;

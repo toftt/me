@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:700');
 @import url('https://fonts.googleapis.com/css?family=Patrick+Hand+SC');
+@import url('https://fonts.googleapis.com/css?family=Tangerine');
 
 html, body, #root {
     height: 100%;
     margin: 0;
     padding: 0;
+    font-size: 18px;
 }

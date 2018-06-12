@@ -1,8 +1,7 @@
 import styled from 'styled-components';
-import colors from '../constants/colors';
 
 const Paragraph = styled.p`
-    color: ${colors.VIOLA};
+    color: ${props => props.theme.primary};
     font-family: ${props => props.handdrawn
         ? '\'Patrick Hand SC\', cursive'
         : ''};
