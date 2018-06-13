@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import Paragraph from '../components/Paragraph';
 import { HanddrawnButton } from '../components/Button';
@@ -14,6 +15,8 @@ export default () => (
       <Paragraph handdrawn>
         Ut malesuada libero a leo eleifend blandit. Donec eget sagittis odio, sit amet ornare felis. Integer dignissim mi metus, quis consectetur sem vestibulum vitae. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras ultrices ultricies tellus sit amet laoreet. Integer vehicula luctus libero, id feugiat nulla porttitor ac. Maecenas metus arcu, lobortis id rutrum sed, malesuada at arcu. Sed quam lectus, porta vitae dolor ac, tempus dapibus ex. Nam nec leo sit amet lacus eleifend varius. In feugiat vehicula libero vitae elementum. Suspendisse venenatis ipsum et varius commodo. Aliquam sapien nulla, viverra congue varius sed, tempus ut orci.
       </Paragraph>
-      <HanddrawnButton>learn more</HanddrawnButton>
+      <Link to='resume'>
+        <HanddrawnButton>learn more</HanddrawnButton>
+      </Link>
     </React.Fragment>
 );
