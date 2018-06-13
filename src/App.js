@@ -39,8 +39,8 @@ class App extends Component {
           </Title>
           </Header>
           <Main>
-            <Route exact path="/" component={Landing} />
-            <Route path="/resume" component={Resume} />
+            <Route exact path={process.env.PUBLIC_URL + '/'} component={Landing} />
+            <Route path={process.env.PUBLIC_URL + '/resume'} component={Resume} />
           </Main>
           <Footer>
             <Paragraph handdrawn>
