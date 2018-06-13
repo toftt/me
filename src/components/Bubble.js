@@ -13,5 +13,6 @@ export default styled.time`
   font-family: 'Patrick Hand SC', cursive;
   height: 60px;
   justify-content: center;
+  margin-right: 30px;
   width: 60px;
 `;
