@@ -10,7 +10,7 @@ import Footer from './components/Footer';
 import colors from './constants/colors';
 
 import Landing from './scenes/Landing';
-import Resume from './scenes/Resume';
+import Resume from './scenes/Resume/index';
 
 const theme = {
   primary: colors.TAPESTRY,
