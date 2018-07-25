@@ -7,6 +7,7 @@ import Paragraph from './components/Paragraph';
 import Header from './components/Header';
 import Main from './components/Main';
 import Footer from './components/Footer';
+import Menu from './components/Menu';
 import colors from './constants/colors';
 
 import Landing from './scenes/Landing';
@@ -38,6 +39,7 @@ class App extends Component {
               Joachim Toft
           </Title>
           </Header>
+          <Menu />
           <Main>
             <Route exact path={process.env.PUBLIC_URL + '/'} component={Landing} />
             <Route path={process.env.PUBLIC_URL + '/resume'} component={Resume} />
