@@ -47,7 +47,7 @@ export default () => (
                 <ResumeEntry
                     title="First Line Support (Social media)"
                     workplace="Transcom"
-                    description="General support with a specialisation on social media (Facebook, Twiiter and Instagram)."
+                    description="General support with a specialization on social media (Facebook, Twitter and Instagram)."
                 />
             </EntryWrapper>
         </Flex>
@@ -57,7 +57,7 @@ export default () => (
                 <ResumeEntry
                     title="First Line Support"
                     workplace="Transcom"
-                    description="Worked as support for a large swedish streaming company, handling everything from technical problems to billing questions."
+                    description="Worked as support for a large Swedish streaming company, handling everything from technical problems to billing questions."
                 />
             </EntryWrapper>
         </Flex>
