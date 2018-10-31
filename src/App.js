@@ -51,9 +51,9 @@ class App extends Component {
           </Header>
           <Menu />
           <Main>
-            <Route exact path={process.env.PUBLIC_URL + '/'} component={Landing} />
-            <Route path={process.env.PUBLIC_URL + '/resume'} component={Resume} />
-            <Route path={process.env.PUBLIC_URL + '/music'} component={() => <WipDiv>WIP</WipDiv>} />
+            <Route exact path={'/'} component={Landing} />
+            <Route path={'/resume'} component={Resume} />
+            <Route path={'/music'} component={() => <WipDiv>WIP</WipDiv>} />
           </Main>
           <Footer>
             <Paragraph handdrawn>
