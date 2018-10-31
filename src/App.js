@@ -29,6 +29,16 @@ const Title = styled.h1`
   font-size: 5em;
 `;
 
+const WipDiv = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 400px;
+
+  font-size: 3rem;
+  font-family: 'Patrick Hand SC', cursive;
+  color: ${props => props.theme.primary};
+`;
+
 class App extends Component {
   render() {
     return (
@@ -43,6 +53,7 @@ class App extends Component {
           <Main>
             <Route exact path={process.env.PUBLIC_URL + '/'} component={Landing} />
             <Route path={process.env.PUBLIC_URL + '/resume'} component={Resume} />
+            <Route path={process.env.PUBLIC_URL + '/music'} component={() => <WipDiv>WIP</WipDiv>} />
           </Main>
           <Footer>
             <Paragraph handdrawn>
