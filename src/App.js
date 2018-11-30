@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import styled, { ThemeProvider } from 'styled-components';
 
-import { Button, HanddrawnButton } from './components/Button';
 import Paragraph from './components/Paragraph';
 import Header from './components/Header';
 import Main from './components/Main';
@@ -12,6 +11,7 @@ import colors from './constants/colors';
 
 import Landing from './scenes/Landing';
 import Resume from './scenes/Resume/index';
+import Projects from './scenes/Projects';
 
 const theme = {
   primary: colors.TAPESTRY,
@@ -20,6 +20,7 @@ const theme = {
 
 const Div = styled.div`
   display: flex;
+  font-size: 22px;
   flex-flow: column;
   min-height: 100%;
 `;
@@ -54,6 +55,7 @@ class App extends Component {
             <Route exact path={'/'} component={Landing} />
             <Route path={'/resume'} component={Resume} />
             <Route path={'/music'} component={() => <WipDiv>WIP</WipDiv>} />
+            <Route path={'/projects'} component={Projects} />
           </Main>
           <Footer>
             <Paragraph handdrawn>

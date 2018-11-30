@@ -37,6 +37,7 @@ export default () => (
   <Container>
     <LinkItem text="Home" to="/" />
     <LinkItem text="Resume" to="/resume" />
+    <LinkItem text="Projects" to="/projects" />
     <LinkItem text="Music" to="/music" />
   </Container>
 );

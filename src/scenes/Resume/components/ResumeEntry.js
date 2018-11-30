@@ -11,6 +11,7 @@ const JobTitle = styled.p`
     border-bottom-right-radius: 100px 6px;
     font-family: 'Patrick Hand SC', cursive;
     margin-bottom: 2px;
+    font-size: 1.4rem;
 `;
 
 const Workplace = styled.p`
@@ -21,7 +22,6 @@ const Workplace = styled.p`
 
 const Description = styled.p`
     font-family: 'Patrick Hand SC', cursive;
-    font-size: 14px;
 `;
 
 export default props => (

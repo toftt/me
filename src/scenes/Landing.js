@@ -1,22 +1,82 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import moment from 'moment';
+import styled from 'styled-components';
 
 import Paragraph from '../components/Paragraph';
 import { HanddrawnButton } from '../components/Button';
 
-export default () => (
-    <React.Fragment>
-    <Paragraph handdrawn>
-        Welcome to my site. Here you can find my resume, personal projects and other miscellanous information. Have a good time.
-      </Paragraph>
-      <Paragraph handdrawn>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec erat sapien, rutrum non pretium ut, efficitur tincidunt ligula. Aenean sed laoreet magna, sed pulvinar mi. Aliquam mattis justo vel velit iaculis, at semper turpis aliquam. Sed nec augue mattis, condimentum massa id, interdum tellus. Aenean commodo, mi eget condimentum malesuada, diam nisl aliquet neque, quis sollicitudin ipsum enim et elit. Nulla tempor pretium nulla pellentesque aliquet. Quisque ut lobortis arcu, nec vehicula leo. Proin ultricies purus vel feugiat consectetur. Curabitur ex quam, gravida ut ipsum ac, vestibulum commodo lorem. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam purus tortor, tincidunt vel eros a, volutpat consequat mauris. Sed est erat, rutrum sed lobortis et, commodo nec sapien. Suspendisse ullamcorper dui quis congue malesuada. Curabitur libero massa, varius a enim vel, bibendum tincidunt nunc.
-      </Paragraph>
-      <Paragraph handdrawn>
-        Ut malesuada libero a leo eleifend blandit. Donec eget sagittis odio, sit amet ornare felis. Integer dignissim mi metus, quis consectetur sem vestibulum vitae. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras ultrices ultricies tellus sit amet laoreet. Integer vehicula luctus libero, id feugiat nulla porttitor ac. Maecenas metus arcu, lobortis id rutrum sed, malesuada at arcu. Sed quam lectus, porta vitae dolor ac, tempus dapibus ex. Nam nec leo sit amet lacus eleifend varius. In feugiat vehicula libero vitae elementum. Suspendisse venenatis ipsum et varius commodo. Aliquam sapien nulla, viverra congue varius sed, tempus ut orci.
-      </Paragraph>
-      <Link to='resume'>
-        <HanddrawnButton>learn more</HanddrawnButton>
-      </Link>
-    </React.Fragment>
+const now = moment();
+const birthDay = moment([1993, 5, 29]);
+const age = now.diff(birthDay, 'years');
+
+const f = {
+  obfuscate: {
+    crawlersDontLookHerePlease: {
+      hmm: {
+        p: '(+46) 72 563 38 39',
+        m: 'c.joachim.toft@gmail.com',
+      },
+    },
+  },
+};
+
+const Icon = styled.i`
+  margin-right: 1rem;
+  margin-bottom: 0.5rem;
+`;
+
+const ContactInfo = ({phoneNumber, email}) => (
+  <Paragraph>
+    <Icon className="fas fa-phone" /> {phoneNumber}
+    <br />
+    <Icon className="fas fa-envelope" /> {email}
+  </Paragraph>
 );
+
+class Landing extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { displayContactInfo: false };
+  }
+
+  onClick = (e) => {
+    e.preventDefault();
+    this.setState({ displayContactInfo: true });
+  }
+
+  render() {
+    return (
+      <React.Fragment>
+        <Paragraph handdrawn>
+          Welcome to my site. Here you can find my resume, personal projects and other miscellanous information. Have a good time.
+        </Paragraph>
+        <Paragraph handdrawn>
+          I am a {age} year old developer/student who is currently on the last year of my bachelor in computer engineering at KTH.
+          Programming have been a big interest of mine for a long time, I wrote my first few lines of code in C++ when I was 16 years old.
+          Lately I've been developing a lot in React, but I have good experince in Java and Python as well. I love the style of functional
+          programming and try to use the functional patterns as much as possible in the code I write. I have also taken an interest in more 
+          functional languages such as Elixir and Haskell.
+        </Paragraph>
+        <Paragraph handdrawn>
+          Apart from programming music is a big passion of mine. I have played the piano since I was young and I have never stopped.
+          I love exploring new music and sharing it with friends, and I attend live concerts when my favorite bands/artists come to my town.
+        </Paragraph>
+        <Paragraph handdrawn>
+          I am looking for something to do when I am done studying, so if you have any opportunities feel free contact me.
+        </Paragraph>
+        {
+          this.state.displayContactInfo
+            ? <ContactInfo
+                phoneNumber={f.obfuscate.crawlersDontLookHerePlease.hmm.p}
+                email={f.obfuscate.crawlersDontLookHerePlease.hmm.m}
+              />
+            : <HanddrawnButton onClick={(e) => this.onClick(e)}>
+                Show contact info
+              </HanddrawnButton>
+        }
+      </React.Fragment>
+    );
+  }
+}
+
+export default Landing;
