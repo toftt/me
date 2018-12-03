@@ -7,6 +7,9 @@ import ResumeEntry from './components/ResumeEntry';
 const Flex = styled.div`
     align-items: center;
     display: flex;
+    @media only screen and (max-width : 500px) {
+        flex-direction: column;
+    }
 `;
 
 const EntryWrapper = styled.div`
@@ -22,10 +25,13 @@ const Header = styled.p`
     font-family: 'Patrick Hand SC', cursive;
     margin: 0;
     margin-top: 20px;
+    @media only screen and (max-width : 500px) {
+        text-align: center;
+    }
 `;
 
 const ResumeWrapper = styled.div`
-    width: 400px;
+    max-width: 400px;
 `;
 
 export default () => (

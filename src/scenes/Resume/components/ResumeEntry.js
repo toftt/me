@@ -2,12 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Entry = styled.article`
-    width: 300px;
+    max-width: 300px;
+    padding: 0 1rem;
 `;
 
 const JobTitle = styled.p`
     border-bottom: 2px solid black;
-    border-bottom-left-radius: 300px 5px;
+    border-bottom-left-radius: 100px 2px;
     border-bottom-right-radius: 100px 6px;
     font-family: 'Patrick Hand SC', cursive;
     margin-bottom: 2px;
