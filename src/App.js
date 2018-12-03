@@ -26,7 +26,7 @@ const Div = styled.div`
 
 const Title = styled.h1`
   font-family: 'Tangerine', cursive;
-  font-size: 5em;
+  font-size: 4rem;
 `;
 
 const WipDiv = styled.div`

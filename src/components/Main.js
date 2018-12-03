@@ -6,6 +6,8 @@ export default styled.main`
     display: flex;
     flex: 1 1 auto;
     flex-direction: column;
-    padding-bottom: 3em;
-    padding-top: 3em;
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
 `;
