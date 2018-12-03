@@ -20,7 +20,6 @@ const theme = {
 
 const Div = styled.div`
   display: flex;
-  font-size: 22px;
   flex-flow: column;
   min-height: 100%;
 `;
