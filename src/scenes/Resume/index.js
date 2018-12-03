@@ -30,99 +30,115 @@ const Header = styled.p`
     }
 `;
 
-const ResumeWrapper = styled.div`
+const Category = styled.div`
     max-width: 400px;
+`;
+
+const ResumeWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    @media only screen and (min-width : 1400px) {
+        flex-direction: row !important;
+        width: 100%;
+        justify-content: space-evenly;
+    }
 `;
 
 export default () => (
     <ResumeWrapper>
-        <Header>Work</Header>
-        <Flex>
-            <TextBubble>2017</TextBubble>
-            <EntryWrapper>
-                <ResumeEntry
-                    title="Developer"
-                    workplace="we know it"
-                    description="Worked independently on various projects, most regarding web sites. I worked on both frontend (React, Redux etc.) and backend (Python, Django)."
-                />
-            </EntryWrapper>
-        </Flex>
-        <Flex>
-            <TextBubble>2016</TextBubble>
-            <EntryWrapper>
-                <ResumeEntry
-                    title="First Line Support (Social media)"
-                    workplace="Transcom"
-                    description="General support with a specialization on social media (Facebook, Twitter and Instagram)."
-                />
-            </EntryWrapper>
-        </Flex>
-        <Flex>
-            <TextBubble>2014</TextBubble>
-            <EntryWrapper>
-                <ResumeEntry
-                    title="First Line Support"
-                    workplace="Transcom"
-                    description="Worked as support for a large Swedish streaming company, handling everything from technical problems to billing questions."
-                />
-            </EntryWrapper>
-        </Flex>
-        <Header>Education</Header>
-        <Flex>
-            <TextBubble>2016</TextBubble>
-            <EntryWrapper>
-                <ResumeEntry
-                    title="Bachelor in computer engineering"
-                    workplace="KTH Royal Institute of Technology"
-                    description="With focus on software engineering."
-                />
-            </EntryWrapper>
-        </Flex>
-        <Header>Skills</Header>
-        <Skill
-            text="Javascript"
-            proficiency="0.9"
-        />
-        <Skill
-            text="React"
-            proficiency="0.8"
-        />
-        <Skill
-            text="Python"
-            proficiency="0.6"
-        />
-        <Skill
-            text="Django"
-            proficiency="0.5"
-        />
-        <Skill
-            text="Java"
-            proficiency="0.65"
-        />
-        <Skill
-            text="SQL"
-            proficiency="0.5"
-        />
-        <Skill
-            text="XML"
-            proficiency="0.6"
-        />
-        <Skill
-            text="Elixir"
-            proficiency="0.3"
-        />
-        <Skill
-            text="PHP"
-            proficiency="0.3"
-        />
-        <Skill
-            text="C++"
-            proficiency="0.2"
-        />
-        <Skill
-            text="Haskell"
-            proficiency="0.23"
-        />
+        <Category>
+            <Header>Work</Header>
+            <Flex>
+                <TextBubble>2017</TextBubble>
+                <EntryWrapper>
+                    <ResumeEntry
+                        title="Developer"
+                        workplace="we know it"
+                        description="Worked independently on various projects, most regarding web sites. I worked on both frontend (React, Redux etc.) and backend (Python, Django)."
+                    />
+                </EntryWrapper>
+            </Flex>
+            <Flex>
+                <TextBubble>2016</TextBubble>
+                <EntryWrapper>
+                    <ResumeEntry
+                        title="First Line Support (Social media)"
+                        workplace="Transcom"
+                        description="General support with a specialization on social media (Facebook, Twitter and Instagram)."
+                    />
+                </EntryWrapper>
+            </Flex>
+            <Flex>
+                <TextBubble>2014</TextBubble>
+                <EntryWrapper>
+                    <ResumeEntry
+                        title="First Line Support"
+                        workplace="Transcom"
+                        description="Worked as support for a large Swedish streaming company, handling everything from technical problems to billing questions."
+                    />
+                </EntryWrapper>
+            </Flex>
+            </Category>
+            <Category>
+            <Header>Education</Header>
+            <Flex>
+                <TextBubble>2016</TextBubble>
+                <EntryWrapper>
+                    <ResumeEntry
+                        title="Bachelor in computer engineering"
+                        workplace="KTH Royal Institute of Technology"
+                        description="With focus on software engineering."
+                    />
+                </EntryWrapper>
+            </Flex>
+        </Category>
+        <Category>
+            <Header>Skills</Header>
+            <Skill
+                text="Javascript"
+                proficiency="0.9"
+            />
+            <Skill
+                text="React"
+                proficiency="0.8"
+            />
+            <Skill
+                text="Python"
+                proficiency="0.6"
+            />
+            <Skill
+                text="Django"
+                proficiency="0.5"
+            />
+            <Skill
+                text="Java"
+                proficiency="0.65"
+            />
+            <Skill
+                text="SQL"
+                proficiency="0.5"
+            />
+            <Skill
+                text="XML"
+                proficiency="0.6"
+            />
+            <Skill
+                text="Elixir"
+                proficiency="0.3"
+            />
+            <Skill
+                text="PHP"
+                proficiency="0.3"
+            />
+            <Skill
+                text="C++"
+                proficiency="0.2"
+            />
+            <Skill
+                text="Haskell"
+                proficiency="0.23"
+            />
+        </Category>
     </ResumeWrapper>
 );
 
