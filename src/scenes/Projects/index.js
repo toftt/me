@@ -14,8 +14,15 @@ const FlexDiv = styled.div`
 const ProjectEntry = styled.article`
     display: flex;
     align-items: center;
+    margin: 2rem 0;
     & > * {
-        margin: 20px;
+        margin: 1rem;
+    }
+    @media only screen and (max-width : 660px) {
+        flex-direction: column;
+        & > * {
+            margin: 0 !important;
+        }
     }
 `;
 
@@ -46,8 +53,8 @@ const DescriptionBody = styled.p`
 const ProjectImage = styled.img`
     border: 3px solid black;
     border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
-    height: 207px;
-    width: 300px;
+    height: 193px;
+    width: 280px;
 `;
 
 
