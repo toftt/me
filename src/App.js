@@ -12,6 +12,7 @@ import colors from './constants/colors';
 import Landing from './scenes/Landing';
 import Resume from './scenes/Resume/index';
 import Projects from './scenes/Projects';
+import Music from './scenes/Music';
 
 const theme = {
   primary: colors.TAPESTRY,
@@ -53,7 +54,7 @@ class App extends Component {
           <Main>
             <Route exact path={'/'} component={Landing} />
             <Route path={'/resume'} component={Resume} />
-            <Route path={'/music'} component={() => <WipDiv>WIP</WipDiv>} />
+            <Route path={'/music'} component={Music} />
             <Route path={'/projects'} component={Projects} />
           </Main>
           <Footer>
