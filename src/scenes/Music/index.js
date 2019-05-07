@@ -3,7 +3,6 @@ import styled from 'styled-components';
 
 import MusicContext from '../../MusicContext';
 import Track from './components/Track';
-import testData from './test.json';
 
 const Header = styled.p`
     color: ${props => props.theme.primary};
