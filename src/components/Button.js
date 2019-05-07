@@ -25,7 +25,7 @@ const Button = styled.button`
     }
 `;
 
-const HanddrawnButton = Button.extend`
+const HanddrawnButton = styled(Button)`
     border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
     border-width: 2px;
     font-family: 'Patrick Hand SC', cursive;
