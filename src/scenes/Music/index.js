@@ -9,6 +9,10 @@ const Header = styled.p`
     font-size: 3rem;
     font-family: 'Patrick Hand SC', cursive;
     margin: 0;
+
+    @media only screen and (max-width : 500px) {
+        font-size: 2rem;
+    }
 `;
 
 const TrackList = styled.div`
@@ -25,6 +29,7 @@ const FlexDiv = styled.div`
     flex-direction: column;
     justify-content: center;
     max-width: 800px;
+    width: 100%;
     & > *:first-child {
         margin-bottom: 1.2rem;
     }
