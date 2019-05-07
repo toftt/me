@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import styled, { ThemeProvider } from 'styled-components';
 
+import { MusicProvider } from './MusicContext';
+
 import Paragraph from './components/Paragraph';
 import Header from './components/Header';
 import Main from './components/Main';
@@ -30,46 +32,38 @@ const Title = styled.h1`
   font-size: 4rem;
 `;
 
-const WipDiv = styled.div`
-  display: flex;
-  justify-content: center;
-  width: 400px;
-
-  font-size: 3rem;
-  font-family: 'Patrick Hand SC', cursive;
-  color: ${props => props.theme.primary};
-`;
-
 class App extends Component {
   render() {
     return (
       <ThemeProvider theme={theme}>
-        <Div>
-          <Header>
-            <Title>
-              Joachim Toft
-          </Title>
-          </Header>
-          <Menu />
-          <Main>
-            <Route exact path={'/'} component={Landing} />
-            <Route path={'/resume'} component={Resume} />
-            <Route path={'/music'} component={Music} />
-            <Route path={'/projects'} component={Projects} />
-          </Main>
-          <Footer>
-            <Paragraph handdrawn>
-              Created by Joachim Toft.
-            </Paragraph>
-            <Paragraph handdrawn>
-              <a href="https://github.com/toftt">github</a>&nbsp;|&nbsp;
-              <a href="https://www.codewars.com/users/toftt">codewars</a>&nbsp;|&nbsp;
-              <a href="https://www.linkedin.com/in/joachim-toft-a232a9128/">linkedin</a>&nbsp;|&nbsp;
-              <a href="https://twitter.com/toft__joachim">twitter</a>
-            </Paragraph>
-          </Footer>
+        <MusicProvider>
+          <Div>
+            <Header>
+              <Title>
+                Joachim Toft
+            </Title>
+            </Header>
+            <Menu />
+            <Main>
+              <Route exact path={'/'} component={Landing} />
+              <Route path={'/resume'} component={Resume} />
+              <Route path={'/music'} component={Music} />
+              <Route path={'/projects'} component={Projects} />
+            </Main>
+            <Footer>
+              <Paragraph handdrawn>
+                Created by Joachim Toft.
+              </Paragraph>
+              <Paragraph handdrawn>
+                <a href="https://github.com/toftt">github</a>&nbsp;|&nbsp;
+                <a href="https://www.codewars.com/users/toftt">codewars</a>&nbsp;|&nbsp;
+                <a href="https://www.linkedin.com/in/joachim-toft-a232a9128/">linkedin</a>&nbsp;|&nbsp;
+                <a href="https://twitter.com/toft__joachim">twitter</a>
+              </Paragraph>
+            </Footer>
 
-        </Div>
+          </Div>
+        </MusicProvider>
       </ThemeProvider>
     );
   }

@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
 
+import MusicContext from '../../MusicContext';
 import Track from './components/Track';
 import testData from './test.json';
+
+const Header = styled.p`
+    color: ${props => props.theme.primary};
+    font-size: 3rem;
+    font-family: 'Patrick Hand SC', cursive;
+    margin: 0;
+`;
 
 const TrackList = styled.div`
     display: flex;
@@ -18,14 +26,25 @@ const FlexDiv = styled.div`
     flex-direction: column;
     justify-content: center;
     max-width: 800px;
+    & > *:first-child {
+        margin-bottom: 1.2rem;
+    }
 `;
 
-export default () => (
-    <FlexDiv>
-        <TrackList>
-        {
-            testData.body.Item.recentlyPlayed.map(item => <Track playData={item} />)
-        }
-        </TrackList>
-    </FlexDiv>
-);
+function Music() {
+    const { data, isFetching } = useContext(MusicContext);
+    const recentlyPlayed = data.body && data.body.Item.recentlyPlayed || [];
+
+    return (
+        <FlexDiv>
+            <Header>Recently played</Header>
+            <TrackList>
+            {
+                recentlyPlayed.map(item => <Track playData={item} />)
+            }
+            </TrackList>
+        </FlexDiv>
+    );
+}
+
+export default Music;
