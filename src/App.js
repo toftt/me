@@ -19,6 +19,8 @@ import Music from './scenes/Music';
 const theme = {
   primary: colors.TAPESTRY,
   secondary: colors.SATIN_LINEN,
+  fontCursive: '\'Patrick Hand SC\', cursive',
+  fontSans: '\'IBM Plex Sans\', sans-serif'
 };
 
 const Div = styled.div`

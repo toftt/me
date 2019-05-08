@@ -10,7 +10,7 @@ export default styled.time`
   border-bottom-right-radius: 46% 52%;
   color: ${props => props.theme.primary};
   display: flex;
-  font-family: 'Patrick Hand SC', cursive;
+  font-family: ${props => props.theme.fontCursive};
   height: 60px;
   justify-content: center;
   margin-right: 30px;

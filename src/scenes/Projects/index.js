@@ -34,19 +34,19 @@ const Title = styled.p`
     border-bottom: 2px solid black;
     border-bottom-left-radius: 300px 5px;
     border-bottom-right-radius: 100px 6px;
-    font-family: 'Patrick Hand SC', cursive;
+    font-family: ${props => props.theme.fontCursive};
     font-size: 1.4rem;
     margin-bottom: 2px;
 `;
 
 const SubTitle = styled.p`
     filter: opacity(70%);
-    font-family: 'Patrick Hand SC', cursive;
+    font-family: ${props => props.theme.fontCursive};
     margin-top: 3px;
 `;
 
 const DescriptionBody = styled.p`
-    font-family: 'Patrick Hand SC', cursive;
+    font-family: ${props => props.theme.fontCursive};
     margin-top: 3px;
 `;
 

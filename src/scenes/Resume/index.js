@@ -22,7 +22,7 @@ const Header = styled.p`
     align-self: center;
     color: ${props => props.theme.primary};
     font-size: 3rem;
-    font-family: 'Patrick Hand SC', cursive;
+    font-family: ${props => props.theme.fontCursive};
     margin: 0;
     margin-top: 20px;
     @media only screen and (max-width : 500px) {
@@ -171,6 +171,6 @@ const Box = styled.div`
 
 const BoxText = styled.p`
     color: ${props => props.theme.primary};
-    font-family: 'Patrick Hand SC', cursive;
+    font-family: ${props => props.theme.fontCursive};
     margin-right: 5px;
 `;

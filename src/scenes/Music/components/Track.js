@@ -13,7 +13,7 @@ const AlbumImage = styled.img`
 const PlayedAt = styled.p`
     color: ${props => props.theme.primary};
     display: inline-block;
-    font-family: 'IBM Plex Sans', sans-serif;
+    font-family: ${props => props.theme.fontSans};
     font-size: 0.7rem;
     margin: 0;
     margin-left: 1rem;
@@ -28,7 +28,7 @@ const Track = styled.div`
 
 const Artist = styled.span`
     color: ${props => props.theme.primary};
-    font-family: 'Patrick Hand SC', cursive;
+    font-family: ${props => props.theme.fontCursive};
     font-size: 0.9rem;
     margin: 0;
 
@@ -40,7 +40,7 @@ const TrackName = styled.span`
     border-bottom-left-radius: 300px 5px;
     border-bottom-right-radius: 100px 6px;
     display: inline-block;
-    font-family: 'Patrick Hand SC', cursive;
+    font-family: ${props => props.theme.fontCursive};
     font-size: 1rem;
 `;
 
@@ -64,7 +64,6 @@ const ImageDescriptionWrapper = styled.div`
 
 const getPlayedAtString = (datestring) => {
     const then = moment(datestring);
-    const now = moment();
 
     return then.fromNow();
 };

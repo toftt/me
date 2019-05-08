@@ -8,7 +8,7 @@ const Button = styled.button`
     border-radius: 4px;
     color: ${props => props.theme.primary};
     cursor: pointer;
-    font-family: 'IBM Plex Sans', sans-serif;
+    font-family: ${props => props.theme.fontSans};
     font-size: 1rem;
     justify-content: center;
     padding-bottom: .375em;
@@ -28,7 +28,7 @@ const Button = styled.button`
 const HanddrawnButton = styled(Button)`
     border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
     border-width: 2px;
-    font-family: 'Patrick Hand SC', cursive;
+    font-family: ${props => props.theme.fontCursive};
 `;
 
 export { Button, HanddrawnButton };

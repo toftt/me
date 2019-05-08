@@ -7,7 +7,7 @@ import Track from './components/Track';
 const Header = styled.p`
     color: ${props => props.theme.primary};
     font-size: 3rem;
-    font-family: 'Patrick Hand SC', cursive;
+    font-family: ${props => props.theme.fontCursive};
     margin: 0;
 
     @media only screen and (max-width : 500px) {
